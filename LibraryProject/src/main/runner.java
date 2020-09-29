@@ -4,6 +4,15 @@ public class runner {
 
 	public static void main(String[] args) {
 		
+		//create new library
+		//create new library items
+		//add item
+		//remove item
+		//update item
+		//create person
+		//delete person
+		//update person
+		
 
 	}
 /*
