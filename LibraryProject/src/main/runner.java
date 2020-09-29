@@ -4,7 +4,11 @@ public class runner {
 
 	public static void main(String[] args) {
 		
+		Library library1 = new Library();
 		//create new library
+		
+		Book book1 = new Book(0001,"Harry Potter","JK Rowling",1997);
+		Map map1 = new Map(00003,"Europe","Chris Columbus","A map of Europe");
 		//create new library items
 		//add item
 		//remove item

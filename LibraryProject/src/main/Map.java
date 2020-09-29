@@ -4,7 +4,7 @@ public class Map extends LibraryItem{
 	
 	private String description;
 
-	public Map(String isbn, String title, String author, String description) {
+	public Map(int isbn, String title, String author, String description) {
 		super(isbn, title, author);
 		this.description=description;
 	}

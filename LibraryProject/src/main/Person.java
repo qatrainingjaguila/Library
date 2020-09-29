@@ -10,6 +10,7 @@ public class Person {
 	private String postcode;
 	private final int MEMBER_ID;
 	private static int noOfMembers=0;
+	private Library checkedOutItems;
 	
 	public Person(String firstName,String lastName,String address,String postcode) {
 		this.MEMBER_ID = noOfMembers;
@@ -17,7 +18,17 @@ public class Person {
 		this.lastName = lastName;
 		this.address = address;
 		this.postcode = postcode;
+		this.checkedOutItems = new Library();
 		noOfMembers++;
+	}
+	
+	public boolean checkOutItem(Library library, Integer bookId) { //NEEDS WORK
+		
+		if (library.getAllItems().containsKey(bookId)){
+			
+			this.checkedOutItems.getAllItems().put(bookId,library.getAllItems().get(bookId));
+		}
+		return true;
 	}
 	
 	public String getFirstName() {
@@ -62,6 +73,10 @@ public class Person {
 
 	public int getMEMBER_ID() {
 		return MEMBER_ID;
+	}
+	
+	public Library getCheckedOutItems() {
+		return this.checkedOutItems;
 	}
 
 	

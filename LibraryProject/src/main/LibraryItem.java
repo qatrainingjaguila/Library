@@ -3,12 +3,12 @@ package main;
 public abstract class LibraryItem {
 	private final int ITEM_ID;
 	private static int numberOfItems = 0;
-	private String ISBN;
+	private int ISBN;
 	private String title;
 	private String author;
 
 
-	public LibraryItem(String isbn, String title, String author) {
+	public LibraryItem(int isbn, String title, String author) {
 		super();
 		this.author = author;
 		this.ISBN = isbn;
@@ -17,11 +17,11 @@ public abstract class LibraryItem {
 		numberOfItems++;
 	}
 
-	public String getISBN() {
+	public int getISBN() {
 		return ISBN;
 	}
 
-	public void setISBN(String iSBN) {
+	public void setISBN(int iSBN) {
 		ISBN = iSBN;
 	}
 
