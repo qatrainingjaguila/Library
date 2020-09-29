@@ -1,15 +1,18 @@
 package main;
 
-public class LibraryItem {
+public abstract class LibraryItem {
 	private final int ITEM_ID;
 	private static int numberOfItems = 0;
 	private String ISBN;
-	private String Title;
+	private String title;
+	private String author;
 
-	public LibraryItem(String isbn, String title) {
+
+	public LibraryItem(String isbn, String title, String author) {
 		super();
+		this.author = author;
 		this.ISBN = isbn;
-		this.Title = title;
+		this.title = title;
 		this.ITEM_ID = numberOfItems;
 		numberOfItems++;
 	}
@@ -23,15 +26,23 @@ public class LibraryItem {
 	}
 
 	public String getTitle() {
-		return Title;
+		return title;
 	}
 
 	public void setTitle(String title) {
-		Title = title;
+		this.title = title;
 	}
 
 	public int getITEM_ID() {
 		return ITEM_ID;
+	}
+	
+	public String getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(String author) {
+		this.author = author;
 	}
 
 }
