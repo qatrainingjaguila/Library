@@ -10,5 +10,10 @@ public class Newspaper extends LibraryItem{
 		super(isbn, title, author);
 		this.editor = editor;
 	}
+	
+	@Override
+	public void update() {
+		
+	}
 
 }

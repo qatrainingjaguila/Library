@@ -16,5 +16,10 @@ public class Map extends LibraryItem{
 	public void setDescription(String description) {
 		this.description = description;
 	}
+	
+	@Override
+	public void update() {
+		
+	}
 
 }

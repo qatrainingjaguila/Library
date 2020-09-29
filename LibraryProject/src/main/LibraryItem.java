@@ -19,6 +19,8 @@ public abstract class LibraryItem {
 		this.ITEM_ID = numberOfItems;
 		numberOfItems++;
 	}
+	
+	public abstract void update();
 
 	public int getISBN() {
 		return ISBN;

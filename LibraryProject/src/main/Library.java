@@ -5,7 +5,7 @@ import java.util.HashMap;
 public class Library {
 	
 	private Map<Integer,LibraryItem> libraryItems;
-	private Map<Integer,Person> members;
+	private Map<Integer,Person> members;	
 	
 	public void addItem(LibraryItem item) { 
 		

@@ -24,11 +24,14 @@ public class runner {
 		//update item
 		
 		Person person1 = new Person("John", "Smith", "The Mall", "SW1 1AA");
+		Person person2 = new Person("Adam", "Smith", "The Mall", "SW1 1AA");
+		
 		library1.getAllMembers().put(person1.getMEMBER_ID(),person1);
 		//create person
 		
 		library1.removeMemberByID(0);
 		//delete person
+		
 		
 		//update person
 		
