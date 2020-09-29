@@ -4,11 +4,11 @@ import java.util.Date;
 
 public class Newspaper extends LibraryItem{
 	
-	private Date dateOfPaper;
+	private String editor;
 
-	public Newspaper(int isbn, String title, String author, Date dateOfPaper) {
+	public Newspaper(int isbn, String title, String author, String editor) {
 		super(isbn, title, author);
-		this.dateOfPaper = dateOfPaper;
+		this.editor = editor;
 	}
 
 }

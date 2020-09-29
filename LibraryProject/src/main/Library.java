@@ -12,11 +12,15 @@ public class Library {
 		this.getAllItems().put(item.getITEM_ID(),item);
 	}
 	
-	public void removeItem(int ID) {
-		System.out.println("Please enter a valid ITEM ID");
+	public void removeItemByID(int ID) {
 		libraryItems.remove(ID);
 	}
 	
+	public void removeMemberByID(int ID) {
+		members.remove(ID);
+	}
+	
+
 	public Library() {
 		
 		this.libraryItems = new HashMap<>();
@@ -25,5 +29,9 @@ public class Library {
 	
 	public Map<Integer,LibraryItem> getAllItems() {
 		return libraryItems;
+	}
+	
+	public Map<Integer,Person> getAllMembers() {
+		return members;
 	}
 }

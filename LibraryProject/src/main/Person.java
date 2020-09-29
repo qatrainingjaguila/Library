@@ -19,14 +19,27 @@ public class Person {
 		this.address = address;
 		this.postcode = postcode;
 		this.checkedOutItems = new Library();
-		noOfMembers++;
+		noOfMembers++;		
 	}
 	
-	public boolean checkOutItem(Library library, Integer bookId) { //NEEDS WORK
+	public boolean checkOutItem(Library library, Integer item_Id) { //NEEDS WORK
 		
-		if (library.getAllItems().containsKey(bookId)){
+		if (library.getAllItems().containsKey(item_Id)){
 			
-			this.checkedOutItems.getAllItems().put(bookId,library.getAllItems().get(bookId));
+			this.checkedOutItems.getAllItems().put(item_Id,library.getAllItems().get(item_Id));
+			
+			library.getAllItems().remove(item_Id);
+		}
+		return true;
+	}
+	
+	public boolean checkInItem(Library library, Integer item_Id) { //NEEDS WORK
+		
+		if (this.checkedOutItems.getAllItems().containsKey(item_Id)){
+			
+			library.getAllItems().put(item_Id,this.checkedOutItems.getAllItems().get(item_Id));
+			
+			this.checkedOutItems.getAllItems().remove(item_Id);
 		}
 		return true;
 	}

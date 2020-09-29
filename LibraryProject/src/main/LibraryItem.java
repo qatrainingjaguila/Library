@@ -1,8 +1,11 @@
 package main;
 
 public abstract class LibraryItem {
+	
 	private final int ITEM_ID;
+	
 	private static int numberOfItems = 0;
+	
 	private int ISBN;
 	private String title;
 	private String author;

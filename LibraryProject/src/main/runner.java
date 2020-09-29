@@ -9,14 +9,32 @@ public class runner {
 		
 		Book book1 = new Book(0001,"Harry Potter","JK Rowling",1997);
 		Map map1 = new Map(00003,"Europe","Chris Columbus","A map of Europe");
+		Newspaper news1 = new Newspaper(197628374, "The SUN", "Katie Hopkins", "Piers Morgan");
 		//create new library items
+		
+		library1.addItem(book1);
+		library1.addItem(map1);
+		library1.addItem(news1);
 		//add item
+		
+		library1.removeItemByID(0);
 		//remove item
+		
+		//library1.getItemByID(0);
 		//update item
+		
+		Person person1 = new Person("John", "Smith", "The Mall", "SW1 1AA");
+		library1.getAllMembers().put(person1.getMEMBER_ID(),person1);
 		//create person
+		
+		library1.removeMemberByID(0);
 		//delete person
+		
 		//update person
 		
+		//checkout item
+		
+		//checkin item
 
 	}
 /*
