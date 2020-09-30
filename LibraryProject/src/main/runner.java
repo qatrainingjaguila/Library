@@ -12,12 +12,12 @@ public class runner {
 		Library library1 = new Library();
 		//create new library
 		
-		Book book1 = new Book(0001,"Harry Potter","JK Rowling",1997);
-		Map map1 = new Map(00003,"Europe","Chris Columbus","A map of Europe");
+		Book book1 = new Book(1234234,"Harry Potter","JK Rowling",1997);
+		Map map1 = new Map(3345,"Europe","Chris Columbus","A map of Europe");
 		Newspaper news1 = new Newspaper(197628374, "The SUN", "Katie Hopkins", "Piers Morgan");
-		Book book2 = new Book(0001,"Harry Potter 2","JK Rowling",1997);
-		Book book3 = new Book(0001,"Harry Potter 3","JK Rowling",1997);
-		Book book4 = new Book(0001,"Harry Potter 4","JK Rowling",1997);
+		Book book2 = new Book(5672,"Harry Potter 2","JK Rowling",1997);
+		Book book3 = new Book(3567,"Harry Potter 3","JK Rowling",1997);
+		Book book4 = new Book(44563,"Harry Potter 4","JK Rowling",1997);
 		//create new library items
 		
 		library1.addItem(book1);
@@ -26,9 +26,10 @@ public class runner {
 		library1.addItem(book2);
 		library1.addItem(book3);
 		library1.addItem(book4);
+		library1.addItem(book1);
 		//add item
 		
-		System.out.println("Library Items:");
+		System.out.println("Library Items post update:");
 		library1.outputAllItems();
 		//output all items
 		
@@ -39,6 +40,8 @@ public class runner {
 		library1.outputAllItems();
 		//output all items
 		
+		
+		System.out.println("\nTest update Item ID 0:");
 		library1.update(input, 0);
 		//update item
 		
@@ -55,22 +58,35 @@ public class runner {
 		library1.addMember(person2);
 		//register person
 		
-		library1.removeMemberByID(1);
-		//delete person
+		System.out.println("Members:");
+		library1.outputAllMembers();
+		//showing members
 		
+		library1.removeMemberByID(1);
+		//delete person#
+		
+		System.out.println("Members post removal:");
+		library1.outputAllMembers();
+		//show all members post removal
+		
+		System.out.println("\nTest update Member ID 0:");
 		library1.updatePerson(0, input);
 		//update person
+		
+		System.out.println("\nMembers post update:");
+		library1.outputAllMembers();
+		//show all members post removal
 		
 		System.out.println("");
 		library1.checkout(0, 0);
 		//checkout item
 		System.out.println("");
 		
-		System.out.println("Library Items:");
+		System.out.println("Library Items Post-Edit:");
 		library1.outputAllItems();
 		//output all items
 		
-		System.out.println("Checked out Items:");
+		System.out.println("\nPerson1 Checked out Items:");
 		person1.getCheckedOutItems().outputAllItems();
 		//output checked out items
 		
@@ -78,11 +94,11 @@ public class runner {
 		library1.checkInItem(0, 0);
 		//check in item
 		
-		System.out.println("Library Items post check in:");
+		System.out.println("\nLibrary Items post check in:");
 		library1.outputAllItems();
 		//output all items
 		
-		System.out.println("Checked out Items post check in:");
+		System.out.println("\nPerson1 Checked out Items post check in:");
 		person1.getCheckedOutItems().outputAllItems();
 		//output checked out items	
 		

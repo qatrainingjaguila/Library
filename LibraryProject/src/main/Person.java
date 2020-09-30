@@ -3,9 +3,7 @@ package main;
 import java.util.Scanner;
 
 public class Person {
-	//checks out item
-	//checks in item
-	//means they need a data structure to store Library Items. Could use Library?
+
 	private String firstName;
 	private String lastName;
 	private String address;
@@ -23,26 +21,6 @@ public class Person {
 		this.checkedOutItems = new Library();
 		noOfMembers++;		
 	}
-	
-	/*
-	 * public boolean checkOutItem(Library library, Integer item_Id) { //NEEDS WORK
-	 * 
-	 * if (library.getAllItems().containsKey(item_Id)){
-	 * 
-	 * this.checkedOutItems.getAllItems().put(item_Id,library.getAllItems().get(
-	 * item_Id));
-	 * 
-	 * library.getAllItems().remove(item_Id); } return true; }
-	 * 
-	 * public boolean checkInItem(Library library, Integer item_Id) { //NEEDS WORK
-	 * 
-	 * if (this.checkedOutItems.getAllItems().containsKey(item_Id)){
-	 * 
-	 * library.getAllItems().put(item_Id,this.checkedOutItems.getAllItems().get(
-	 * item_Id));
-	 * 
-	 * this.checkedOutItems.getAllItems().remove(item_Id); } return true; }
-	 */
 	
 	public void update(Scanner input) {
 		

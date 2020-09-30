@@ -47,7 +47,17 @@ public class Library {
 	public void outputAllItems() {
 		for (Entry<Integer,LibraryItem> record: libraryItems.entrySet()) {
 			System.out.print("ID: " + record.getKey());
-			System.out.println(" " + record.getValue().getTitle());
+			System.out.print(" " + record.getValue().getTitle());
+			System.out.print(" " + record.getValue().getAuthor());
+			System.out.println(" ISBN: " + record.getValue().getISBN());
+		}
+	}
+	
+	public void outputAllMembers() {
+		for (Entry<Integer,Person> person: members.entrySet()) {
+			System.out.print("ID: " + person.getKey());
+			System.out.print(" " + person.getValue().getFirstName());
+			System.out.println(" " + person.getValue().getLastName());
 		}
 	}
 	
