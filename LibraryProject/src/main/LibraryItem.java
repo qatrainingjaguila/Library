@@ -1,5 +1,7 @@
 package main;
 
+import java.util.Scanner;
+
 public abstract class LibraryItem {
 	
 	private final int ITEM_ID;
@@ -20,7 +22,7 @@ public abstract class LibraryItem {
 		numberOfItems++;
 	}
 	
-	public abstract void update();
+	abstract public void update(Scanner input);
 
 	public int getISBN() {
 		return ISBN;
